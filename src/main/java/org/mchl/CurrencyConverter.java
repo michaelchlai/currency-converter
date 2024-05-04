@@ -28,7 +28,8 @@ public class CurrencyConverter {
         //(Step 4/4) Principal calculator
         Calculator principalCalculator = new Calculator();
         BigDecimal principal = principalCalculator.compute(currencyRatePairs.get(cliInputs.get("fromCurrency")),currencyRatePairs.get(cliInputs.get("toCurrency")),BigDecimal.valueOf(Long.parseLong(cliInputs.get("amount"))));
-        System.out.println(principal);
+
+        System.out.println("From: "+ cliInputs.get("fromCurrency")+ " | To: "+ cliInputs.get("toCurrency") + " | Amount: " +cliInputs.get("amount")+" | Result: "+ cliInputs.get("toCurrency") + " " +principal);
     }
 }
 
